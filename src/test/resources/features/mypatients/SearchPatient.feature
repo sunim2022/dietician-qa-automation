@@ -1,6 +1,5 @@
 @tag
 Feature: Search Patient
-
   
   @Test1
   Scenario: Search patients by name
