@@ -1,0 +1,47 @@
+pipeline {
+    agent any
+
+
+    stages {
+        stage('Build') {
+      
+            steps {
+                // Get some code from a GitHub repository
+               git branch: 'main', poll: false, url: ' https://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@github.com/sunim2022/dietician-qa-automation.git'
+
+
+                // Run Maven on a Unix agent.
+               //sh "mvn -Dmaven.test.failure.ignore=true clean package"
+              withMaven(jdk: 'Java 11', maven: 'Maven_3.8.5') {
+                   bat "mvn package test"    // some block
+                }
+                // To run Maven on a Windows agent, use
+               
+            }
+
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+                success {
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'test-output/HtmlReport', reportFiles: 'ExtentHtml.html', reportName: 'HTML Report', reportTitles: ''])
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
+        }
+        
+        stage('reports') {
+            steps {
+                script {
+                        allure([
+                                includeProperties: false,
+                                
+                                properties: [],
+                                reportBuildPolicy: 'ALWAYS',
+                                results: [[path: 'allure-results/']]
+                        ])
+                }
+            }
+        }
+    }
+}
