@@ -1,4 +1,4 @@
-package stepdefinitions.pageobjects;
+package com.dietician.pages;
 
 import java.util.List;
 

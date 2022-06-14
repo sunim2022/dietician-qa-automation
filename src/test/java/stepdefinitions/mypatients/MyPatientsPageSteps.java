@@ -6,10 +6,10 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebDriver;
 
 import com.dietician.factory.DriverFactory;
+import com.dietician.pages.DieticianHomePage;
+import com.dietician.pages.MyPatientsPage;
+import com.dietician.pages.SimpleLoginPage;
 
-import stepdefinitions.pageobjects.DieticianHomePage;
-import stepdefinitions.pageobjects.MyPatientsPage;
-import stepdefinitions.pageobjects.SimpleLoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

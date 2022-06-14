@@ -5,13 +5,13 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebDriver;
 
 import com.dietician.factory.DriverFactory;
+import com.dietician.pages.ConfirmConditionsAndCreatePlanPage;
+import com.dietician.pages.DieticianHomePage;
+import com.dietician.pages.MyPatientsPage;
+import com.dietician.pages.PatientTestReportPage;
+import com.dietician.pages.SimpleLoginPage;
+import com.dietician.pages.ViewRecentDietsPage;
 
-import stepdefinitions.pageobjects.ConfirmConditionsAndCreatePlanPage;
-import stepdefinitions.pageobjects.DieticianHomePage;
-import stepdefinitions.pageobjects.MyPatientsPage;
-import stepdefinitions.pageobjects.PatientTestReportPage;
-import stepdefinitions.pageobjects.SimpleLoginPage;
-import stepdefinitions.pageobjects.ViewRecentDietsPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
