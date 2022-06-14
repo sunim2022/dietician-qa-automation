@@ -1,6 +1,5 @@
 @tag
 Feature: My Patients page
-
   
   @Test1
   Scenario: Verify breadcrumbs
