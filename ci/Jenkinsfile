@@ -28,7 +28,8 @@ pipeline {
                 // failed, record the test results and archive the jar file.
                 success {
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'test-output/HtmlReport', reportFiles: 'ExtentHtml.html', reportName: 'HTML Report', reportTitles: ''])
-            }
+
+                }
         }
         }
         
