@@ -1,4 +1,4 @@
-package stepdefinitions.pageobjects;
+package com.dietician.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SimpleLoginPage {
 	
-	//Driver reference
-		private WebDriver driver;
 		
 		//Define all elements of this page
 		
@@ -24,7 +22,6 @@ public class SimpleLoginPage {
 		
 
 		public SimpleLoginPage(WebDriver driver) {		
-			this.driver = driver;
 			PageFactory.initElements(driver, this);
 		}
 		

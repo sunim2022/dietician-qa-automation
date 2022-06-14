@@ -4,31 +4,32 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+
+import com.dietician.factory.DriverFactory;
+import com.dietician.pages.DieticianHomePage;
+import com.dietician.pages.MyPatientsPage;
+import com.dietician.pages.SimpleLoginPage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import stepdefinitions.pageobjects.DieticianHomePage;
-import stepdefinitions.pageobjects.MyPatientsPage;
-import stepdefinitions.pageobjects.SimpleLoginPage;
 
 public class MyPatientsPageSteps {
 	
-	private WebDriver driver;
+	private WebDriver driver = DriverFactory.getDriver();
 	
-	@BeforeClass
-	public void beforeClass() {
-		
-		//TODO:
-		System.setProperty("webdriver.chrome.driver", "C:/Users/msuni/Software/Drivers/chromedriver_102.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://dietician-dummy-url.com");
-		
-	}
+//	private WebDriver driver;
+//	
+//	@BeforeClass
+//	public void beforeClass() {
+//		
+//		//TODO:
+//		System.setProperty("webdriver.chrome.driver", "C:/Users/msuni/Software/Drivers/chromedriver_102.exe");
+//		driver = new ChromeDriver();
+//		driver.manage().window().maximize();
+//		driver.get("https://dietician-dummy-url.com");
+//		
+//	}
 	
 	@Given("User is on any page after login")
 	public void user_is_on_any_page_after_login() {
@@ -82,8 +83,5 @@ public class MyPatientsPageSteps {
 		
 	}
 	
-	@AfterClass
-	public void afterClass() {
-		driver.quit();
-	}
+	
 }

@@ -2,7 +2,7 @@
 Feature: Patient Information
 
   @Test1
-  Scenario: View pateints previous diet plans
+  Scenario: View patients previous diet plans
     Given Patients records are displayed
     When User clicks on button 'View Previous Diet Plans'
     Then It redirects user to 'Generated Diet Plans' page
