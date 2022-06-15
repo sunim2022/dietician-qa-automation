@@ -1,4 +1,4 @@
-package stepdefinitions.mypatients;
+package stepdefinitions;
 
 import com.dietician.factory.DriverFactory;
 import com.dietician.pages.NewPatientPage;
