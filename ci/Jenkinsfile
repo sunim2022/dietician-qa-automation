@@ -4,33 +4,33 @@ pipeline {
 
     stages {
         stage('Build') {
-      
+            
+            
             steps {
-                // Get some code from a GitHub repository
-               git branch: 'main', poll: false, url: 'https://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@github.com/sunim2022/dietician-qa-automation.git'
-
-			 try {
-			     
-			   
-               //sh "mvn -Dmaven.test.failure.ignore=true clean package"
-              withMaven(jdk: 'Java 11', maven: 'Maven_3.8.5') {
-                   bat "mvn package test"    // some block
+                
+                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                      // Get some code from a GitHub repository
+                       git branch: 'main', poll: false, url: 'https://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@github.com/sunim2022/dietician-qa-automation.git'
+        
+        			 
+                       //sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                      withMaven(jdk: 'Java 11', maven: 'Maven_3.8.5') {
+                           bat "mvn package test"    // some block
+                        }
                 }
               
-			 }catch (Exception e) {
-			      echo 'Exception occurred: ' + e.toString()
-			 }
-               
             }
+            
+           
+           
 
             post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                success {
+                always {
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'test-output/HtmlReport', reportFiles: 'ExtentHtml.html', reportName: 'HTML Report', reportTitles: ''])
-
-                }
-        }
+            }
+         }
         }
         
         stage('reports') {
