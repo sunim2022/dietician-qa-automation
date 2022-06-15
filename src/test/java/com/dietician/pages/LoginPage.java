@@ -27,7 +27,7 @@ public class LoginPage{
 	
 	public LoginPage(WebDriver driver)//Constructor initializing the page objects
 	{
-		
+		//this.driver = driver;
 		PageFactory.initElements(driver, this);//make sure the steps once again
 		
 		
