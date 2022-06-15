@@ -36,12 +36,14 @@ public class ApplicationHooks {
 
 	@After(order = 0)
 	public void quitbrowser() {
+		WebDriver driver = DriverFactory.getDriver();
 		driver.quit();
 	}
 
 	@After(order = 1)
 	public void screenshot(Scenario scenario) {
 		// method to Take screenshot
+		WebDriver driver = DriverFactory.getDriver();
 		if (scenario.isFailed()) {
 			String ScreenshotName = scenario.getName().replaceAll("", "-");
 			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);// Jenkins accepts Bytes

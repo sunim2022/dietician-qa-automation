@@ -5,10 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.dietician.factory.DriverFactory;
+
 
 
 public class LoginPage{
-	WebDriver driver;
+	WebDriver driver = DriverFactory.getDriver();
+
 	//PageFactory implementation//object repository
 	
 	@FindBy(id="username")WebElement username1;
@@ -25,9 +28,11 @@ public class LoginPage{
 	@FindBy(id="useraccount")WebElement account;
 	@FindBy(xpath = "//input[@class='signin']")WebElement selectsignin; 
 	
+	
+	
 	public LoginPage(WebDriver driver)//Constructor initializing the page objects
 	{
-		//this.driver = driver;
+		
 		PageFactory.initElements(driver, this);//make sure the steps once again
 		
 		
@@ -42,7 +47,8 @@ public class LoginPage{
 		selectsignin.click();
 	}
 	
-	public String loginpageTitle()
+	
+	public String pageTitle()
 	{
 		return driver.getTitle();
 	}
@@ -103,6 +109,20 @@ public class LoginPage{
 	{
 		Sign.click();
     }
+	
+	public String email_text()
+	{
+		String a = email.getText();
+		return a;	
+	}
+	
+	public String passowrd_text()
+	{
+	String b = password2.getText();
+	return b;
+	}
+	
+	
 	
 	
 }
