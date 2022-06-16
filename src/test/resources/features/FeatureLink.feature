@@ -16,14 +16,13 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-#			
+#
 @homepageFeature
 Feature: Feature link on Home Page
   I want to validate Feature link on Home Page
 
-  @tag1
+  @homepageFeature
   Scenario: Validating the Feature Link on Home Page
     Given User is on Home page
     When User clicks on Featured link
     Then User is directed to Featured content page
-

@@ -21,7 +21,7 @@
 Feature: Client Link on Home Page
   I want to validate the client link
 
-  @tag1
+  @HomepageClintlink
   Scenario: Validating the Client link on Upper Menu Bar on Home page
     Given User is on Home page
     When User clicks on Client link on Home Page

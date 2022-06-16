@@ -20,7 +20,7 @@
 Feature: Data fields on Contact us Page
   I want to validate the Data fields on Contact us Page
 
-  @tag1
+  @HomepageDatafieldConcactus
   Scenario: Validating the First Name field on Contact Us Page
     Given User is on Contact Us Page
     When User enters first name with some numeric values

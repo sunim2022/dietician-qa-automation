@@ -1,4 +1,4 @@
-@tag
+@PatientInfo
 Feature: Patient Information
 
   @PatientInfo

@@ -1,4 +1,4 @@
-@tag
+@ViewDietPlans
 Feature: View Diet plans
 
   @ViewDietPlans

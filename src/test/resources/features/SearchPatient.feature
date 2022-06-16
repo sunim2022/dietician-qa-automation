@@ -1,4 +1,4 @@
-@tag
+@SearchPatient
 Feature: Search Patient
   
   @SearchPatient

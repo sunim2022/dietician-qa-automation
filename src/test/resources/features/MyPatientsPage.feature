@@ -1,4 +1,4 @@
-@tag
+@MyPatients
 Feature: My Patients page
   
   @MyPatients

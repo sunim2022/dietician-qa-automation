@@ -1,4 +1,4 @@
-@tag
+@CreateNewReportAndDietPlan
 Feature: Dietician is on the "My Patients"page.
 
   @CreateNewReportAndDietPlan

@@ -22,7 +22,7 @@
 Feature: REGISTER Link on Home Page
   I want to validate the REGISTER LINK on home page
   
-  @tag1
+  @HomepageRegister
   Scenario: Validating the REGISTER link on Upper Menu Bar  on Home page
     Given User is on Home page
     When User clicks on REGISTER Link on Home Page

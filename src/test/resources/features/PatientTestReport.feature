@@ -1,4 +1,4 @@
-@tag
+@PatientTestReports
 Feature: Patient test reports
 
   @PatientTestReports

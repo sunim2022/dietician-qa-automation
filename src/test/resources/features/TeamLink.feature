@@ -22,7 +22,7 @@
 Feature: TEAM Link on Home Page
   I want to validate the team link on Home page
 
-  @tag1
+  @HomepageTeam
   Scenario: Validating the TEAM link on Upper Menu Bar  on Home page
     Given User is on Home page
     When User clicks on Team Link on Home Page

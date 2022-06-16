@@ -22,7 +22,7 @@
 Feature: Contact Us link on Home Page
   I want validate contact us link on home page
 
-  @tag1
+  @HomepageContactus
   Scenario: Validating the Contact us link on Home page
     Given User is on Home page
     When User clicks on  Contact us link

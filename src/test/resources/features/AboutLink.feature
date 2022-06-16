@@ -21,7 +21,7 @@
 Feature: About Link on Home Page
   I want to validate About Link on Home Page
 
-  @tag1
+  @Homepageaboutlink
   Scenario: Validating the About Link on Home Page
     Given User is on Home page
     When User clicks on About Link on Home page

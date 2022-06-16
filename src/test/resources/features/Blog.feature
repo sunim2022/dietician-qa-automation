@@ -22,7 +22,7 @@
 Feature: Blogs link on Home Page
   I want to validate Blogs link on Home Page
 
-  @tag1
+  @homepageBlog
   Scenario: Title of your scenario
     Given User is on Home page
     When User clicks on Blogs link

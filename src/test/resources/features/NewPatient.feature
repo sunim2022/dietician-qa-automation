@@ -17,8 +17,8 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-@tag
-Feature: Sign In Form 
+@NewPatient
+Feature: Create a new Patient 
   
   Scenario Outline: Dietician wants to create newPatientRecord 
     Given User is on NewPatientPage
